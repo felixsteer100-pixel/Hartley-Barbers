@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hartley &amp; Sons Barbers, Brighton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2ecde;--fg:#1c1b18;--mut:#6b655a;--line:#cdc4ad;--card:#faf6ec;--red:#ae2a20;--navy:#1f2d4d;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15140f;--fg:#ece5d2;--mut:#a39c87;--line:#3b382c;--card:#1e1c15;--red:#c4372c;--navy:#2c4170;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15140f;--fg:#ece5d2;--mut:#a39c87;--line:#3b382c;--card:#1e1c15;--red:#c4372c;--navy:#2c4170;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 Barlow,system-ui,sans-serif}
+h1,h2,h3,.cond{font-family:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.05em;margin:0}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px}
+.pole{height:12px;background:repeating-linear-gradient(135deg,var(--red) 0 12px,var(--bg) 12px 24px,var(--navy) 24px 36px,var(--bg) 36px 48px)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:16px 18px}
+.logo{font-size:26px;font-weight:700;text-decoration:none}
+nav a{margin-left:16px;font:600 15px 'Barlow Condensed';letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.hero{padding:44px 18px 52px}
+.kick{color:var(--red);font-weight:700;font-size:17px;margin-bottom:10px}
+h1{font-size:clamp(52px,15vw,104px);line-height:.92;font-weight:700}
+.lead{max-width:30em;color:var(--mut);font-size:18px;margin:20px 0 26px}
+.btn{display:inline-block;background:var(--red);color:#fff;border:0;border-radius:0;padding:14px 24px;font:700 18px 'Barlow Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none}
+.btn:disabled{opacity:.4}
+.btn.ghost{background:none;color:var(--fg);border:1.5px solid var(--fg)}
+.btn.sm{padding:7px 12px;font-size:14px}
+section.s{padding:38px 18px;border-top:1px solid var(--line)}
+h2{font-size:38px;margin-bottom:18px}
+h3{font-size:19px;margin:26px 0 10px;color:var(--mut)}
+.menu{list-style:none;margin:0;padding:0}
+.menu li{display:flex;align-items:baseline;gap:8px;padding:7px 0;font-size:18px}
+.menu small{color:var(--mut);font-size:14px;margin-left:6px}
+.dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+.opts{display:grid;gap:8px}
+.opt,.pill{border:1.5px solid var(--line);background:var(--card);color:var(--fg);border-radius:0;font:inherit;cursor:pointer}
+.opt{display:flex;justify-content:space-between;padding:12px 14px;text-align:left;font-size:17px}
+.opt span{color:var(--mut)}
+.pill{padding:10px 14px;min-width:64px}
+.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.on span{color:inherit;opacity:.7}
+button:disabled.pill{opacity:.35;text-decoration:line-through;cursor:default}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.scroll{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px}
+.day{display:flex;flex-direction:column;align-items:center;line-height:1.15;flex:none}
+.day small{font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.day b{font:700 24px 'Barlow Condensed'}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px}
+input[type=text],input[type=tel],input[type=email],input[type=password]{width:100%;padding:13px;margin-bottom:8px;border:1.5px solid var(--line);border-radius:0;background:var(--card);color:var(--fg);font:inherit}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--mut);margin:6px 0 16px}
+.chk input{margin-top:4px}
+.err{color:var(--red);font-weight:600;min-height:1.4em}
+.mut{color:var(--mut)}
+.ticket{border:2px dashed var(--fg);padding:22px;background:var(--card)}
+.ticket h3{color:var(--fg);font-size:30px;margin:0 0 10px}
+.two{display:grid;gap:26px}
+@media(min-width:700px){.two{grid-template-columns:1fr 1fr}}
+footer{padding:26px 18px 40px;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+footer details{margin:10px 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.stat{border:1.5px solid var(--line);padding:10px;background:var(--card)}
+.stat b{display:block;font:700 34px 'Barlow Condensed'}
+.stat span{font-size:13px;color:var(--mut)}
+.tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.item{display:grid;grid-template-columns:70px 1fr;gap:10px;padding:12px 0;border-top:1px solid var(--line)}
+.item .tm{font:700 26px/1 'Barlow Condensed'}
+.item .tm small{display:block;font:500 12px Barlow;color:var(--mut);text-transform:none;letter-spacing:0}
+.item .inf span{display:block;color:var(--mut);font-size:14px}
+.acts{grid-column:2;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tag{font:700 13px 'Barlow Condensed';letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.x{opacity:.5}
+.x b{text-decoration:line-through}
+</style>
+</head>
+<body>
+<div class="pole"></div>
+
+<div id="site">
+<header class="bar"><a class="logo cond" href="#top" data-n></a><nav><a href="#services">Prices</a><a href="#book">Book</a><a href="#find">Find us</a></nav></header>
+
+<main>
+<div class="wrap hero" id="top">
+<p class="cond kick" id="kick"></p>
+<h1 id="tag"></h1>
+<p class="lead">Walk-ins when we can, bookings when you want certainty. Two chairs, two barbers and a kettle that’s always on.</p>
+<a class="btn" href="#book">Book a chair</a>
+</div>
+
+<div class="wrap">
+<section class="s" id="services"><h2>Prices</h2><ul class="menu" id="menu"></ul></section>
+
+<section class="s" id="book"><h2>Book a chair</h2>
+<div id="form">
+<h3>1 · Service</h3><div id="svc" class="opts"></div>
+<h3>2 · Barber</h3><div id="bar" class="row"></div>
+<h3>3 · Day</h3><div id="days" class="row scroll"></div>
+<h3>4 · Time</h3><div id="times" class="grid"></div>
+<h3>5 · Your details</h3>
+<input type="text" id="nm" placeholder="Name" autocomplete="name">
+<input type="tel" id="ph" placeholder="Mobile number" autocomplete="tel">
+<input type="email" id="em" placeholder="Email (optional)" autocomplete="email">
+<label class="chk"><input type="checkbox" id="ok"><span>I’m happy for <span data-n></span> to store these details to manage my booking. See the privacy note at the bottom of the page.</span></label>
+<button class="btn" id="go">Confirm booking</button>
+<p class="err" id="err"></p>
+</div>
+<div id="done" hidden></div>
+</section>
+
+<section class="s" id="find"><h2>Find us</h2>
+<div class="two"><div><p id="addr" style="font-size:19px"></p><p><a id="tel" style="font-size:19px"></a></p><p class="mut">Cancellations: please give us 24 hours’ notice so we can offer the chair to someone else.</p></div>
+<ul class="menu" id="hrs"></ul></div></section>
+</div>
+</main>
+
+<footer><div class="wrap" style="padding:0">
+<details id="privacy"><summary>Privacy note</summary><p>We collect your name, phone number and (optionally) email only to manage your appointment and contact you about it. We don’t sell or share your details, and we delete bookings after 12 months. To see, correct or delete your data, call or ask in the shop. You can complain to the ICO (ico.org.uk) if you’re unhappy with how we’ve handled it. This site sets no tracking or advertising cookies.</p></details>
+<p><span id="cr"></span> · <a href="#staff">Staff login</a></p>
+</div></footer>
+</div>
+
+<main id="admin" class="wrap" hidden style="padding-top:24px;padding-bottom:40px"></main>
+
+<script>
+const CFG={
+name:'Hartley & Sons',credit:'Website by Felix',kick:'Est. 1998 · Brighton',tag:'Sharp cuts.<br>No fuss.',
+addr:'14 Kensington Gardens, Brighton BN1 4AL',phone:'01273 555 0142',pin:'1234',slot:30,
+hours:{0:null,1:null,2:['09:00','17:30'],3:['09:00','17:30'],4:['09:00','19:00'],5:['09:00','18:00'],6:['09:00','17:00']},
+barbers:['Dan','Marcus'],
+services:[{n:'Skin fade',p:25,m:45},{n:'Classic cut',p:20,m:30},{n:'Cut & beard',p:30,m:60},{n:'Hot towel shave',p:22,m:30},{n:'Beard trim',p:12,m:30},{n:'Kids’ cut (under 12)',p:15,m:30}]
+};
+const $=s=>document.querySelector(s);
+const pad=n=>String(n).padStart(2,'0');
+const ymd=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const hm=t=>pad(Math.floor(t/60))+':'+pad(t%60);
+const mins=s=>{const[a,b]=s.split(':');return +a*60+ +b};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const dayName=d=>d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
+let mem=[];
+const load=()=>{try{return JSON.parse(localStorage.getItem('hs_bookings')||'[]')}catch(e){return mem}};
+const save=a=>{mem=a;try{localStorage.setItem('hs_bookings',JSON.stringify(a))}catch(e){}};
+const D=[...Array(14)].map((_,i)=>{const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()+i);return d});
+const S={svc:0,bar:'Any',di:null,t:null};
+
+function slotsFor(d){const h=CFG.hours[d.getDay()];if(!h)return[];const o=[],[a,b]=h.map(mins);for(let t=a;t+CFG.slot<=b;t+=CFG.slot)o.push(t);return o}
+function taken(date,br){const s=new Set();load().forEach(b=>{if(b.date===date&&b.barber===br&&b.status!=='cancelled')for(let k=0;k<b.slots;k++)s.add(b.t+k*CFG.slot)});return s}
+function avail(d,t,need){
+ const all=slotsFor(d),now=new Date();
+ if(ymd(d)===ymd(now)&&t<=now.getHours()*60+now.getMinutes())return null;
+ const pool=S.bar==='Any'?CFG.barbers:[S.bar];
+ return pool.find(br=>{const tk=taken(ymd(d),br);for(let k=0;k<need;k++){const x=t+k*CFG.slot;if(!all.includes(x)||tk.has(x))return false}return true})||null}
+
+function drawBook(){
+ const sv=CFG.services[S.svc],need=Math.ceil(sv.m/CFG.slot);
+ $('#svc').innerHTML=CFG.services.map((s,i)=>`<button class="opt${i==S.svc?' on':''}" data-svc="${i}"><b>${s.n}</b><span>${s.m} min · £${s.p}</span></button>`).join('');
+ $('#bar').innerHTML=['Any',...CFG.barbers].map(b=>`<button class="pill${b==S.bar?' on':''}" data-bar="${b}">${b=='Any'?'No preference':b}</button>`).join('');
+ $('#days').innerHTML=D.map((d,i)=>{const ok=slotsFor(d).some(t=>avail(d,t,need));return `<button class="pill day${i===S.di?' on':''}" data-di="${i}"${ok?'':' disabled'}><small>${d.toLocaleDateString('en-GB',{weekday:'short'})}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString('en-GB',{month:'short'})}</small></button>`}).join('');
+ const d=D[S.di];
+ if(d&&S.t!=null&&!avail(d,S.t,need))S.t=null;
+ $('#times').innerHTML=d?slotsFor(d).map(t=>`<button class="pill${t===S.t?' on':''}" data-t="${t}"${avail(d,t,need)?'':' disabled'}>${hm(t)}</button>`).join(''):'<p class="mut">Pick a day first.</p>';
+}
+$('#form').onclick=e=>{const b=e.target.closest('button');if(!b)return;const k=b.dataset;
+ if(b.id==='go')return submit();
+ if(k.svc!=null)S.svc=+k.svc;if(k.bar)S.bar=k.bar;if(k.di!=null){S.di=+k.di;S.t=null}if(k.t)S.t=+k.t;
+ drawBook()};
+
+function submit(){
+ const err=m=>($('#err').textContent=m),sv=CFG.services[S.svc],need=Math.ceil(sv.m/CFG.slot),day=D[S.di];
+ const nm=$('#nm').value.trim(),ph=$('#ph').value.trim();
+ if(!day||S.t==null)return err('Pick a day and a time.');
+ if(nm.length<2)return err('Add your name.');
+ if(ph.replace(/\D/g,'').length<10)return err('Add a mobile number we can reach you on.');
+ if(!$('#ok').checked)return err('Please tick the box so we can store your booking.');
+ const bar=avail(day,S.t,need);
+ if(!bar){drawBook();return err('Sorry, that slot has just gone. Pick another.')}
+ const b={id:Math.random().toString(36).slice(2,7).toUpperCase(),date:ymd(day),t:S.t,slots:need,svc:sv.n,price:sv.p,barber:bar,name:nm,phone:ph,email:$('#em').value.trim(),status:'booked'};
+ save([...load(),b]);err('');
+ $('#form').hidden=true;const f=$('#done');f.hidden=false;
+ f.innerHTML=`<div class="ticket"><h3>You’re booked in, ${esc(nm.split(' ')[0])}.</h3><p><b>${sv.n}</b> with ${bar}<br>${dayName(day)} at ${hm(S.t)}<br>Ref ${b.id}</p><p class="mut">Need to change it? Ring ${CFG.phone}.</p><button class="btn ghost" id="again">Book another</button></div>`;
+ $('#again').onclick=()=>{S.t=null;$('#form').hidden=false;f.hidden=true;drawBook()}}
+
+/* ---------- staff dashboard ---------- */
+let F='today',authed=false;
+try{authed=sessionStorage.getItem('hs_in')==='1'}catch(e){}
+function drawAdmin(){
+ const m=$('#admin');
+ if(!authed){
+  m.innerHTML=`<h2>Staff login</h2><p class="mut">Enter your PIN.</p><input type="password" id="pin" inputmode="numeric" placeholder="PIN"><button class="btn" id="in">Enter</button><p class="err" id="perr"></p><p><a href="#top">← Back to site</a></p>`;
+  const go=()=>{if($('#pin').value.trim()===CFG.pin){authed=true;try{sessionStorage.setItem('hs_in','1')}catch(e){}drawAdmin()}else $('#perr').textContent='Wrong PIN.'};
+  $('#in').onclick=go;$('#pin').onkeydown=e=>{if(e.key==='Enter')go()};
+  return}
+ const all=load().sort((a,b)=>a.date.localeCompare(b.date)||a.t-b.t),today=ymd(new Date()),wk=ymd(D[6]);
+ const live=all.filter(b=>b.status!=='cancelled'),tdy=live.filter(b=>b.date===today);
+ const wkN=live.filter(b=>b.status==='booked'&&b.date>=today&&b.date<=wk).length;
+ const takings=tdy.filter(b=>b.status!=='noshow').reduce((s,b)=>s+b.price,0);
+ const rows=all.filter(b=>F==='today'?b.date===today:F==='next'?b.date>=today&&b.status==='booked':F==='past'?b.date<today:true);
+ const lab={done:'Done',noshow:'No-show',cancelled:'Cancelled'};
+ m.innerHTML=`<div class="row" style="justify-content:space-between;align-items:center"><h2 style="margin:0">Dashboard</h2><a href="#top">← Site</a></div>
+ <div class="stats"><div class="stat"><b>${tdy.length}</b><span>Today</span></div><div class="stat"><b>${wkN}</b><span>Next 7 days</span></div><div class="stat"><b>£${takings}</b><span>Takings today</span></div></div>
+ <div class="tabs">${[['today','Today'],['next','Upcoming'],['past','Past'],['all','All']].map(([k,v])=>`<button class="pill${F==k?' on':''}" data-f="${k}">${v}</button>`).join('')}</div>
+ ${rows.length?rows.map(b=>`<div class="item${b.status==='cancelled'?' x':''}"><div class="tm">${hm(b.t)}<small>${dayName(new Date(b.date+'T00:00'))}</small></div><div class="inf"><b>${esc(b.name)}</b><span>${esc(b.svc)} · ${esc(b.barber)} · £${b.price}</span><span><a href="tel:${esc(b.phone.replace(/\s/g,''))}">${esc(b.phone)}</a>${b.email?' · '+esc(b.email):''}</span></div><div class="acts">${b.status==='booked'?`<button class="btn sm" data-id="${b.id}" data-act="done">Done</button><button class="btn sm ghost" data-id="${b.id}" data-act="noshow">No-show</button><button class="btn sm ghost" data-id="${b.id}" data-act="cancelled">Cancel</button>`:`<span class="tag">${lab[b.status]}</span><button class="btn sm ghost" data-id="${b.id}" data-act="booked">Undo</button>`}</div></div>`).join(''):'<p class="mut">Nothing here.</p>'}
+ <p style="margin-top:26px"><button class="btn sm ghost" id="out">Log out</button> <button class="btn sm ghost" id="rst">Reset demo data</button></p>`}
+$('#admin').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.f){F=b.dataset.f;return drawAdmin()}
+ if(b.dataset.id){const a=load(),x=a.find(y=>y.id===b.dataset.id);if(x){x.status=b.dataset.act;save(a)}return drawAdmin()}
+ if(b.id==='out'){authed=false;try{sessionStorage.removeItem('hs_in')}catch(e){}return drawAdmin()}
+ if(b.id==='rst'){if(b.dataset.s){save([]);try{localStorage.removeItem('hs_seeded')}catch(e){}seed();drawBook();return drawAdmin()}b.dataset.s=1;b.textContent='Tap again to confirm'}};
+
+/* ---------- demo data, setup ---------- */
+function seed(){
+ try{if(localStorage.getItem('hs_seeded'))return;localStorage.setItem('hs_seeded','1')}catch(e){return}
+ const o=D.filter(d=>slotsFor(d).length).slice(0,2);
+ const demo=[[0,'10:00',0,'Callum R.','Dan'],[0,'14:30',2,'Priya S.','Marcus'],[1,'09:30',1,'Joe M.','Dan'],[1,'12:00',3,'Sam O.','Marcus'],[1,'16:00',5,'Ben K.','Dan']];
+ save([...load(),...demo.map(([i,h,s,nm,br])=>{const sv=CFG.services[s];return{id:'D'+i+s,date:ymd(o[i]),t:mins(h),slots:Math.ceil(sv.m/CFG.slot),svc:sv.n,price:sv.p,barber:br,name:nm,phone:'07700 900123',email:'',status:'booked'}})])}
+
+function show(a){$('#site').hidden=a;$('#admin').hidden=!a;if(a){drawAdmin();window.scrollTo(0,0)}}
+function route(){show(location.hash==='#staff')}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;e.preventDefault();const h=a.getAttribute('href').slice(1);
+ if(h==='staff')return show(true);
+ show(false);const t=h&&document.getElementById(h);setTimeout(()=>t?t.scrollIntoView({behavior:'smooth'}):window.scrollTo(0,0),0)});
+document.title=CFG.name+' Barbers, Brighton';
+document.querySelectorAll('[data-n]').forEach(e=>e.textContent=CFG.name);
+$('#kick').textContent=CFG.kick;$('#tag').innerHTML=CFG.tag;$('#addr').textContent=CFG.addr;
+$('#tel').textContent=CFG.phone;$('#tel').href='tel:'+CFG.phone.replace(/\s/g,'');$('#cr').textContent=CFG.credit;
+$('#menu').innerHTML=CFG.services.map(s=>`<li><span>${s.n}<small>${s.m} min</small></span><i class="dots"></i><b>£${s.p}</b></li>`).join('');
+const N=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+$('#hrs').innerHTML=[1,2,3,4,5,6,0].map(i=>`<li><span>${N[i]}</span><i class="dots"></i><span>${CFG.hours[i]?CFG.hours[i][0]+'–'+CFG.hours[i][1]:'Closed'}</span></li>`).join('');
+seed();drawBook();route();window.addEventListener('hashchange',route);
+</script>
+</body>
+</html>
